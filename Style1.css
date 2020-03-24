@@ -1,0 +1,36 @@
+body {	
+		font-family: Calibri, Sans serif;
+		text-align: justify;
+		background-color:#9ee1f0;
+		margin-left:100px;
+		margin-right:100px;
+}
+
+h1 {
+	text-align: center;
+	color: #b80b0b;
+}
+
+h2 {
+	text-align: left;
+	color: #b80b0b;
+}
+
+table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse; 
+}
+
+th {
+	background-color:#620e69;
+	height: 50px;
+	border: 1px solid black;
+}
+
+td {
+	padding: 10px;
+	border: 1px solid black;
+	
+}
+
