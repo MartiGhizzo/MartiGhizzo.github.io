@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<title> Vacanze e Hobby </title>
- 		<meta charset="UTF-8">
- 		<link href="Style1.css" rel="stylesheet" type="text/css">
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Serie Tv</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Cinzel+Decorative:700" rel="stylesheet">
+    <link rel = "stylesheet" href = "style.css">
+  </head>
 
-	<body>
-		<div class="container">
-		<h1> Vacanze </h1>
-		<h2> Dubai </h2>
-		<p> Dubai è una delle capitali di uno dei sette stati che compongono gli Emirati Arabi Uniti. </p>
-		<div class="row">
-		<img src="Dubai.jpg" height= 200px>
-		<img src="dubai-marina.jpg" height=200px>
-		<img src="dubai2.jpg" height=200px>
-		</div>
+  <body>
 
-		<h3> Cosa visitare a Dubai: </h3>
-		<!-- Lista con lettere -->
-		<ul type= "a" class="list-group">
-			<li class="list-group-item"> Burj Khalifa </li>
-			<li class="list-group-item"> Burj Al Arab </li>
-			<li class="list-group-item"> Fontane di Dubai </li>
-			<li class="list-group-item"> Palm Jumeirah </li>
-		</ul>
-		<h3> Cose fatte a Dubai: </h3>
-		<!-- Lista con lettere -->
-		<ul type= "a" class="list-group">
-			<li class="list-group-item"> Salire sul Burj Khalifa </li>
-			<li class="list-group-item"> Sciare al Mall of the Emirates </li>
-			<li class="list-group-item"> Andare a Sunset Beach </li>
-		</ul>
-		<p> Se vuoi organizzare la tua vacanza a Dubai <a href="https://www.visitdubai.com/it/discover?gclid=Cj0KCQjwpLfzBRCRARIsAHuj6qVcObrgG6JDOdFL-ADiFWnC5gz-emtgUoCm4pCofysESwCxCaF4cFcaAiHmEALw_wcB"> clicca qui. </a> </p>
+      <header>
+        <h1>NETFLIX</h1>
+        <img src="logo.png" alt="un semplice logo che rappresenta la piattaforma netflix">
+      </header>
+      <main>
+        <article>
+          <h2>HOME</h2>
+
+          <p>Benvenuto sul un sito di recensioni delle più varie e conosciute serie tv della piattaforma Netflix!</p>
+
+          <p>Non perdere tempo! Dicci quello che pensi! </p>
+          <button id= "bottone"> Mi piace </button> 
+          <div id= "click"> </div>
+          <div>
+            <h3> SKAM ITALIA </h3>
+            <img src="galleria5.jpg" alt="Serie tv Skam Italia" >
+            <p> Un gruppo di amiche e amici del liceo J. F. Kennedy di Roma vive le prime esperienze di vita e affronta problemi più o meno importanti, interfacciandosi con tematiche come: l'amore e l'amicizia, la sessualità, la salute mentale, le dipendenze, la violenza e le molestie, la religione e la discriminazione in generale. Ognuna delle quattro stagioni segue le vicissitudini di un personaggio diverso, in un arco di tempo di due anni circa, fino al diploma.</p>
+            <div id="recensioni">
+              <h3>Recensioni</h3>
+              <p class="recensione">
+                @user73326 Adoro questa serie
+              </p>
+            </div>
+            <h3>Aggiungi recensione</h3>
+            <label for="messaggio">Messaggio</label>
+            <input id="messaggio" type="text">
+            <button id="invia">Invia</button>
+          </div>
+          
+        </article>
+
+      <aside>
+        <h2>Potrebbe interessarti anche: </h2>
+
+        <img src="galleria1.jpg" alt="Copertina Narcos">
+        <img src="galleria2.jpg" alt="Copertina Greenhouse Academy">
+        <img src="galleria3.jpg" alt="Copertina Stranger Things">
+        <img src="galleria4.jpg" alt="Copertina Black Mirror">
+      </aside>
+
+      
+        
+
+    </main> 
 
 
-		<h1> Hobby </h1>
-		<h2> Cosa fare quando si visita un posto nuovo </h2>
-		<p> Ecco alcune cose che potresti fare: </p>
-		<table align="center">
-			<thead>
-			<tr>
-				<th>Attività di divertimento </th>
-				<th>Attività di cultura </th>
-			</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td> Fare una passeggiata </td>
-					<td> Visitare un museo </td>
-				
-				</tr>
-				<tr>
-					<td> Farsi degli amici </td>
-					<td> Visitare la città </td>
 
-				</tr>
-				<tr>
-					<td> Andare a delle feste </td>
-					<td> Visitare le piazze </td>
-			</tbody>
-			</table>
-			<br/>
-		<div class="row">
-		<img src= "Museo.jpg" height= 200px>
-		<img src="montagna.jpg" height=200px>
-		<img src="images.jpg" height=200px>
-		</div>
-		</div>
-		</body>
-		</html>
+    <footer>
+      <p>Grazie per aver visitato il nostro sito!!</p>
+    </footer>
+
+  </body>
+  <script> 
+    "use strict";
+    const bottone = document.getElementById("bottone")
+    bottone.onclick = () => { 
+      document.getElementById("click").textContent = "Hai messo mi piace" 
+      document.getElementById("click").style.fontSize = "16px" 
+      bottone.style.backgroundColor="blue" 
+      }
+      const bottone1 = document.getElementById("invia")
+      bottone1.onclick = () => { 
+        const p = document.createElement("p")
+        const testo = document.createTextNode(document.getElementById("messaggio").value)
+        p.setAttribute("class","recensione")
+        p.appendChild(testo)
+        document.getElementById("recensioni").appendChild(p)
+      }
+  </script>
+</html>
 
 
 
