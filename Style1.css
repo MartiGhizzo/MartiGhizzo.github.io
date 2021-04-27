@@ -1,36 +1,101 @@
-body {	
-		font-family: Calibri, Sans serif;
-		text-align: justify;
-		background-color:#9ee1f0;
-		margin-left:100px;
-		margin-right:100px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
+html {
+  font-size: 10px;
+  background-color:  rgb(65,65,65);
+}
+
+
+body {
+  width: 70%;
+  min-width: 800px;
+  margin: 0 auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(255,255,255);
+}
+
+
 h1 {
-	text-align: center;
-	color: #b80b0b;
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 2px 2px 10px white;
 }
 
 h2 {
-	text-align: left;
-	color: #b80b0b;
+  font-size: 3rem;
+  text-align: center;
 }
 
-table {
-	width: 100%;
-	text-align: center;
-	border-collapse: collapse; 
+h3 {
+  font-size: 2.2rem;
 }
 
-th {
-	background-color:#620e69;
-	height: 50px;
-	border: 1px solid black;
+p{
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
-td {
-	padding: 10px;
-	border: 1px solid black;
-	
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row ;
 }
 
+main, header, article, aside, footer, section {
+  background-color: rgba(2, 2, 2, 0.5);
+  padding: 1%;
+}
+
+h1 {
+  flex: 5;
+  text-transform: uppercase;
+}
+
+header img {
+  height: 60px;
+  padding-top: 20.15px;
+}
+
+main {
+  display: flex;
+}
+article{
+  flex: 3;
+
+}
+article img{
+  width:400px;
+  height: 200px;
+}
+
+aside {
+  flex: 2;
+  margin-left: 10px;
+
+}
+
+aside img {
+ margin: 50px 15px;
+ width:300px;
+ height: 150px;
+
+}
+
+footer {
+  margin-top: 10px;
+}
+
+.recensione{
+  min-height: 50px;
+  min-width: 100px;
+  background-color: white;
+  color:black;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding-top: 10px;
+}
